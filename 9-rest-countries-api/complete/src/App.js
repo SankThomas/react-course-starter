@@ -20,27 +20,29 @@ function App() {
     <>
       <section>
         <h1>{countries.length} countries</h1>
-        {countries.map((country) => {
-          const {
-            name,
-            alpha2Code,
-            capital,
-            region,
-            subregion,
-            population,
-            demonym,
-            timezones,
-            borders,
-            numericCode,
-            flag,
-          } = country
+        <div className="countries">
+          {countries.map((country) => {
+            const {
+              name,
+              alpha2Code,
+              capital,
+              region,
+              subregion,
+              population,
+              demonym,
+              timezones,
+              borders,
+              numericCode,
+              flag,
+            } = country
 
-          return (
-            <article key={numericCode}>
-              <img src={flag} alt={name} />
-            </article>
-          )
-        })}
+            return (
+              <article key={numericCode}>
+                <img src={flag} alt={name} />
+              </article>
+            )
+          })}
+        </div>
       </section>
     </>
   )
