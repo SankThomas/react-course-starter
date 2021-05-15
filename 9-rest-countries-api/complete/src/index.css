@@ -18,11 +18,37 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  background-color: #f1f1f1;
+  color: #333;
 }
 
 .countries {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.countries article {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.countries article div h4 {
+  padding: 20px 0 0 20px;
+  font-size: 24px;
+}
+
+.countries article div ul {
+  padding: 20px;
+}
+
+.countries article div ul li {
+  margin: 10px 0;
+}
+
+.countries article div ul li span {
+  font-weight: bold;
 }
 
 @media (min-width: 600px) {
@@ -34,5 +60,9 @@ body {
 @media (min-width: 992px) {
   .countries {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  img {
+    height: 400px;
   }
 }
