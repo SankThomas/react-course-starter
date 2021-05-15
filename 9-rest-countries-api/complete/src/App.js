@@ -1,50 +1,17 @@
-import { useState, useEffect } from "react"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import Countries from "./components/Countries"
+import Country from "./components/Country"
 
-const url = `https://restcountries.eu/rest/v2/all`
-
-function App() {
-  const [countries, setCountries] = useState([])
-
-  useEffect(() => {
-    const fetchCountries = async () => {
-      const response = await fetch(url)
-      const data = await response.json()
-      setCountries(data)
-      console.log(data)
-    }
-
-    fetchCountries()
-  }, [])
-
+const App = () => {
   return (
-    <>
-      <section>
-        <h1>{countries.length} countries</h1>
-        <div className="countries">
-          {countries.map((country) => {
-            const {
-              name,
-              alpha2Code,
-              capital,
-              region,
-              subregion,
-              population,
-              demonym,
-              timezones,
-              borders,
-              numericCode,
-              flag,
-            } = country
-
-            return (
-              <article key={numericCode}>
-                <img src={flag} alt={name} />
-              </article>
-            )
-          })}
-        </div>
-      </section>
-    </>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact>
+          <Countries />
+        </Route>
+        <Route path="/country/:name" children={<Country />}></Route>
+      </Switch>
+    </BrowserRouter>
   )
 }
 
