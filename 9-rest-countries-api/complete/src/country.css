@@ -1,3 +1,51 @@
-.country img {
-  height: auto;
+.country {
+  padding: 50px 20px;
+}
+
+.country article {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.country article img.country-img {
+  height: 300px;
+  width: 500px;
+}
+
+.country article h4 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.country article ul li {
+  margin: 20px 0;
+}
+
+.country article ul li span {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .country {
+    padding: 0 20px;
+  }
+
+  .country article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .country article div {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .country {
+    max-width: 1200px;
+    margin: auto;
+  }
 }
