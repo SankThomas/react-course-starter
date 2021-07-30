@@ -12,7 +12,7 @@ const App = () => {
     <>
       <section className="main">
         <h1>A simple birthdays App</h1>
-        <p className="length">{people.length} people have birthdays today</p>
+        <p className="length">{people.length} people have upcoming birthdays</p>
         <div className="main-div">
           {people.map(({ id, title, dob }) => (
             <article
