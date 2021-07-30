@@ -4,31 +4,31 @@ export const birthdays = [
   {
     id: uuidv4(),
     title: "Thomas Sankara",
-    dob: "10/10/2010",
+    dob: "April 8th",
   },
   {
     id: uuidv4(),
-    title: "Thomas Sankara",
-    dob: "10/10/2010",
+    title: "Dwight Shrute",
+    dob: "November 10th",
   },
   {
     id: uuidv4(),
-    title: "Thomas Sankara",
-    dob: "10/10/2010",
+    title: "Jim Halpert",
+    dob: "December 32nd",
   },
   {
     id: uuidv4(),
-    title: "Thomas Sankara",
-    dob: "10/10/2010",
+    title: "Pam Beesly",
+    dob: "February 29th",
   },
   {
     id: uuidv4(),
-    title: "Thomas Sankara",
-    dob: "10/10/2010",
+    title: "Michael Scott",
+    dob: "August 31st",
   },
   {
     id: uuidv4(),
-    title: "Thomas Sankara",
-    dob: "10/10/2010",
+    title: "Maher Shalal",
+    dob: "March 5th",
   },
 ]
