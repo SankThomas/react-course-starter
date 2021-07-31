@@ -37,8 +37,10 @@ function App() {
   }, [])
 
   return (
-    <div className="bg-gray-900 h-screen text-white text-center py-20">
-      <h4 className="text-4xl">There are</h4>
+    <div className="bg-gray-900 h-screen text-white text-center pt-52 pb-20">
+      <h4 className="text-4xl font-bold tracking-widest uppercase lg:text-5xl">
+        There are
+      </h4>
       <section className="timer flex items-center justify-center text-center py-10">
         <div className="bg-gray-800 m-1 w-20 p-2 rounded xl:w-40">
           <h3 className="text-red-400 font-bold text-lg md:text-2xl xl:text-6xl">
@@ -65,7 +67,9 @@ function App() {
           <p className="mt-2">Seconds</p>
         </div>
       </section>
-      <h4 className="text-4xl">To Christmas</h4>
+      <h4 className="text-4xl font-bold tracking-widest uppercase lg:text-6xl">
+        To Christmas
+      </h4>
     </div>
   )
 }
