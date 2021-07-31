@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h4 className="text-center text-lg lg:text-4xl pt-10">
+      <h4 className="text-center text-lg lg:text-4xl pt-52">
         Frequently Asked Questions
       </h4>
       <div className="flex flex-col justify-center px-5 md:max-w-2xl md:mx-auto">
