@@ -18,12 +18,12 @@ function App() {
 
   return (
     <>
-      <div className="px-5 py-10">
-        <h1 className="text-center flex flex-col items-center font-bold text-4xl">
+      <div className="px-5 py-20 bg-purple-700 text-white">
+        <h1 className="text-center flex flex-col items-center font-bold text-4xl uppercase tracking-widest">
           Have no idea what to cook?
           <button
             onClick={() => fetchMealData()}
-            className="text-sm bg-gray-200 p-2 rounded hover:bg-gray-400 transition-all duration-500 cursor-pointer"
+            className="text-sm bg-purple-300 mt-5 p-2 rounded hover:bg-gray-400 transition-all duration-500 cursor-pointer"
           >
             Get Random Recipe
           </button>
@@ -42,7 +42,7 @@ function App() {
             }) => (
               <article
                 key={idMeal}
-                className="grid gap-5 mt-10 md:grid-cols-2 md:items-center xl:max-w-5xl xl:mx-auto"
+                className="grid gap-5 mt-10 md:grid-cols-2 md:items-center xl:max-w-7xl xl:mx-auto"
               >
                 <div>
                   <h4 className="font-bold text-xl">
