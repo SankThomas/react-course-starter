@@ -52,6 +52,7 @@ const App = () => {
             id="text"
             value={text}
             onChange={(e) => setText(e.target.value)}
+            autoFocus
             className="bg-transparent border-b mr-2 p-2"
           />
           <button
