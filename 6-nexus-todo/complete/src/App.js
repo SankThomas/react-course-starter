@@ -56,7 +56,7 @@ const App = () => {
 
         <p className="my-5">You have {list.length} items in your ToDo List</p>
 
-        <div className="w-96">
+        <div className="w-96 md:w-1/2">
           <List items={list} deleteItem={deleteItem} />
         </div>
       </section>
