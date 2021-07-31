@@ -11,7 +11,7 @@ const List = ({ items, deleteItem }) => {
               onClick={() => deleteItem(id)}
               className="bg-red-500 py-1 px-6 text-white"
             >
-              Delete
+              Edit (Add icon equivalent)
             </button>
           </ul>
         ))}
