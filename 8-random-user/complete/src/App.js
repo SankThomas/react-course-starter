@@ -17,8 +17,8 @@ function App() {
 
   return (
     <>
-      <h1 className="font-bold text-xl mb-5 mt-20 text-center lg:text-3xl">
-        Let's fetch some random users
+      <h1 className="font-bold text-2xl mb-5 mt-20 text-center text-white lg:text-5xl uppercase tracking-widest lg:mb-10">
+        Let's fetch some users
       </h1>
       <section className="flex flex-col items-center justfy-center text-center">
         {people.map(
@@ -33,7 +33,7 @@ function App() {
           }) => (
             <article
               key={uuid}
-              className="bg-gray-200 p-5 rounded shadow-lg md:w-96"
+              className="bg-gray-50 p-5 rounded shadow-lg md:w-96 lg:w-1/2 lg:py-20"
             >
               <img
                 src={large}
@@ -59,7 +59,7 @@ function App() {
           )
         )}
         <button
-          className="mt-10 bg-gray-200 p-2 rounded hover:bg-gray-400 transition-all duration-500"
+          className="mt-10 bg-white text-pink-500 font-bold tracking-widest uppercase px-6 py-2 rounded hover:bg-pink-500 hover:text-white transition-all duration-500"
           onClick={() => fetchPeopleData()}
         >
           Get another user
