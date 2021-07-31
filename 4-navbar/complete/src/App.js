@@ -26,7 +26,9 @@ function App() {
         )}
 
         <div>
-          <button onClick={() => setIsOpen(!isOpen)}>Menu</button>
+          <button onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? "Close Menu" : "Open Menu"}
+          </button>
         </div>
       </header>
     </>
