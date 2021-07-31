@@ -41,7 +41,7 @@ const App = () => {
   return (
     <>
       <section className="bg-indigo-500 flex flex-col items-center justify-center h-screen text-white">
-        <h1 className="text-center font-bold text-4xl pt-5 pb-10">
+        <h1 className="text-center font-bold text-4xl pt-5 pb-10 uppercase tracking-widest lg:text-6xl">
           YouTube Comments
         </h1>
 
