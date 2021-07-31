@@ -40,21 +40,31 @@ const App = () => {
 
   return (
     <>
-      <section className="bg-gray-300 flex flex-col items-center justify-center h-screen">
-        <h1 className="text-center font-bold text-4xl pt-5 pb-10">ToDo App</h1>
+      <section className="bg-indigo-500 flex flex-col items-center justify-center h-screen text-white">
+        <h1 className="text-center font-bold text-4xl pt-5 pb-10">
+          YouTube Comments
+        </h1>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} autoComplete="off">
           <input
             type="text"
             name="text"
             id="text"
             value={text}
             onChange={(e) => setText(e.target.value)}
+            className="bg-transparent border-b mr-2 p-2"
           />
-          <button type="submit">Add to List</button>
+          <button
+            type="submit"
+            className="bg-white text-indigo-500 font-bold tracking-widest rounded-md p-2 uppercase text-sm"
+          >
+            Add Comment
+          </button>
         </form>
 
-        <p className="my-5">You have {list.length} items in your ToDo List</p>
+        <p className="my-5 text-left">
+          You have {list.length} items in your ToDo List
+        </p>
 
         <div className="w-96 md:w-1/2">
           <List items={list} deleteItem={deleteItem} />
