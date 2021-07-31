@@ -8,6 +8,7 @@ function App() {
 
   return (
     <>
+      <h1 style={{ textAlign: "center" }}>Profile Read More</h1>
       <section className="main">
         {people.map((person) => (
           <People key={person.id} {...person} />
