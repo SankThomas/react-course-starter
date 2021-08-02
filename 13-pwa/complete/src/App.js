@@ -9,8 +9,7 @@ function App() {
     e.preventDefault()
 
     if (!text) {
-      console.log("Input is empty")
-      alert("Input is empty")
+      console.log("Cannot send empty message")
     } else {
       const newItems = {
         id: new Date().getTime().toString(),
@@ -24,20 +23,30 @@ function App() {
   return (
     <>
       <section>
-        <h1>Nexus</h1>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="text">Enter your todo item</label>
+        <h1 className="text-center text-4xl my-5 lg:text-6xl">Mad Chatter</h1>
+        <form
+          onSubmit={handleSubmit}
+          className="form absolute bottom-5 w-full mx-auto md:w-9/12 lg:w-1/2"
+        >
           <input
             type="text"
             name="text"
             id="text"
-            placeholder="text"
+            placeholder="Type a message"
             required
+            title="Type a message"
             value={text}
             onChange={(e) => setText(e.target.value)}
+            className="w-full bg-gray-300 p-2 rounded-l-md"
+            autoComplete="off"
+            autoCapitalize="on"
           />
-          <button type="submit" onClick={handleSubmit}>
-            Add
+          <button
+            type="submit"
+            onClick={handleSubmit}
+            className="absolute right-0 bg-green-500 text-white p-2 rounded-r-md"
+          >
+            Send
           </button>
         </form>
         <List items={items} />
