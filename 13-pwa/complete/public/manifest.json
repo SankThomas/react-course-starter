@@ -1,7 +1,7 @@
 {
-  "short_name": "Nexus",
-  "name": "Nexus Scheduling App",
-  "description": "Use this app to write down your todo list for the day",
+  "short_name": "Mad Chatter",
+  "name": "The Mad Chatter",
+  "description": "Chat All Day and All Night",
   "icons": [
     {
       "src": "favicon.ico",
