@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom"
-import Navbar from "./components/Navbar"
 import Homepage from "./components/Homepage"
-import SinglePost from "./components/SinglePost"
-import Blog from "./components/Blog"
-import Error from "./components/Error"
+import Navbar from "./components/Navbar"
+import Blog from "./pages/Blog"
+import Error from "./pages/Error"
+import SinglePost from "./pages/SinglePost"
 
 function App() {
   return (
@@ -13,9 +13,7 @@ function App() {
         <Route path="/" exact>
           <Homepage />
         </Route>
-        <Route path="/blog/:slug">
-          <SinglePost />
-        </Route>
+        <Route path="/blog/:slug" children={<SinglePost />}></Route>
         <Route path="/blog">
           <Blog />
         </Route>
