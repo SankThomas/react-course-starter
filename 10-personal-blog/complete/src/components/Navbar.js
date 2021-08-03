@@ -1,31 +1,29 @@
-import { useState } from "react"
 import { Link } from "react-router-dom"
-import { BiMenuAltLeft } from "react-icons/bi"
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
   return (
     <>
-      <header>
-        {isOpen && (
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/blog">Blog</Link>
-              </li>
-            </ul>
-          </nav>
-        )}
-
-        <div>
-          <button onClick={() => setIsOpen(!isOpen)}>
-            <BiMenuAltLeft />
-          </button>
-        </div>
+      <header className="bg-white text-center py-4 mb-5">
+        <nav>
+          <ul className="flex items-center justify-center">
+            <li className="mr-5">
+              <Link
+                to="/"
+                className="text-purple-700 font-bold tracking-widest"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/blog"
+                className="text-purple-700 font-bold tracking-widest"
+              >
+                Blog
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </header>
     </>
   )
