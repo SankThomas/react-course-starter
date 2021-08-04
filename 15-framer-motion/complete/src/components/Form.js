@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { motion } from "framer-motion"
 
 export default function Form() {
   const [name, setName] = useState("")
@@ -17,7 +18,10 @@ export default function Form() {
 
   return (
     <>
-      <form
+      <motion.form
+        initial={{ x: "100vw" }}
+        animate={{ x: 0 }}
+        transition={{ delay: 2, duration: 1 }}
         className="text-gray-300"
         autoComplete="off"
         onSubmit={handleSubmit}
@@ -74,7 +78,7 @@ export default function Form() {
         >
           Send
         </button>
-      </form>
+      </motion.form>
     </>
   )
 }
