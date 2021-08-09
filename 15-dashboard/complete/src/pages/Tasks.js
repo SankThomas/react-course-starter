@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import { FaPlus } from "react-icons/fa"
 import QuotesGenerator from "../components/QuotesGenerator"
 import List from "./components/List"
 import { v4 as uuidv4 } from "uuid"
