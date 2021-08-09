@@ -8,3 +8,31 @@ body {
   color: #333;
   background-color: #f1f1f1;
 }
+
+p {
+  line-height: 1.8;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+input::placeholder {
+  font-family: "Tajawal", sans-serif;
+}
+
+@media (min-width: 1024px) {
+  body {
+    overflow-y: hidden;
+  }
+}
