@@ -1,5 +1,6 @@
 // import { useState } from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import ScrollToTop from "./components/ScrollToTop"
 import Header from "./components/Header"
 import Sidebar from "./components/Sidebar"
 // import LoginForm from "./login/LoginForm"
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Sidebar />
       <Switch>
