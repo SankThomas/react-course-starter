@@ -17,6 +17,8 @@ const fetchLocalStorage = () => {
 export default function Tasks() {
   const [text, setText] = useState("")
   const [tasks, setTasks] = useState(fetchLocalStorage())
+  // eslint-disable-next-line
+  const [isEditing, setIsEditing] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -41,6 +43,13 @@ export default function Tasks() {
     setTasks([])
   }
 
+  const editTask = (id) => {
+    const editingTask = tasks.find((task) => task.id === id)
+    setTasks(tasks.filter((task) => task.id !== id))
+    setIsEditing(true)
+    setText(editingTask.title)
+  }
+
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks))
   }, [tasks])
@@ -49,7 +58,7 @@ export default function Tasks() {
     <>
       <section className="px-5 lg:mx-32 mt-5">
         <h1 className="font-bold uppercase text-xl md:text-2xl lg:text-4xl">
-          Did you know?
+          Your tasks (Plus a random quote)
         </h1>
         <div>
           <QuotesGenerator />
@@ -80,7 +89,12 @@ export default function Tasks() {
           </button>
         </form>
 
-        <List tasks={tasks} deleteItem={deleteItem} clearItems={clearItems} />
+        <List
+          tasks={tasks}
+          deleteItem={deleteItem}
+          clearItems={clearItems}
+          editTask={editTask}
+        />
       </section>
     </>
   )
