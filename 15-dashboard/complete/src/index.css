@@ -34,9 +34,3 @@ input::placeholder {
 article ol div:last-child {
   border-bottom: none;
 }
-
-@media (min-width: 1024px) {
-  body {
-    overflow-y: hidden;
-  }
-}
