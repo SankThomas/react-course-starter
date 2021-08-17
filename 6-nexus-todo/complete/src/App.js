@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import List from "./List"
 import { v4 as uuidv4 } from "uuid"
+import DefaultVideo from "./components/DefaultVideo"
+import MoreVideos from "./components/MoreVideos"
 
 const getLocalStorage = () => {
   let list = localStorage.getItem("list")
@@ -14,6 +16,12 @@ const getLocalStorage = () => {
 const App = () => {
   const [text, setText] = useState("")
   const [list, setList] = useState(getLocalStorage())
+
+  const handleCancel = (e) => {
+    e.preventDefault()
+
+    setText("")
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -40,12 +48,18 @@ const App = () => {
 
   return (
     <>
-      <section className="bg-indigo-500 flex flex-col items-center justify-center h-screen text-white">
+      <section className="bg-indigo-500 flex flex-col text-white px-5 lg:px-10">
         <h1 className="text-center font-bold text-4xl pt-5 pb-10 uppercase tracking-widest lg:text-6xl">
           YouTube Comments
         </h1>
 
-        <form onSubmit={handleSubmit} autoComplete="off">
+        <div className="flex flex-col lg:flex-row">
+          <DefaultVideo />
+
+          <MoreVideos />
+        </div>
+
+        <form onSubmit={handleSubmit} autoComplete="off" className="mb-10">
           <input
             type="text"
             name="text"
@@ -53,19 +67,23 @@ const App = () => {
             value={text}
             onChange={(e) => setText(e.target.value)}
             autoFocus
-            className="bg-transparent border-b mr-2 p-2"
+            className="bg-transparent border-b mr-2 p-2 w-full lg:w-1/2"
           />
+          <button
+            type="reset"
+            className="text-gray-100 font-bold tracking-widest rounded-md p-2 uppercase text-sm mt-5 lg:mt-0"
+            onClick={handleCancel}
+          >
+            Cancel
+          </button>
           <button
             type="submit"
             className="bg-white text-indigo-500 font-bold tracking-widest rounded-md p-2 uppercase text-sm"
+            onClick={handleSubmit}
           >
             Add Comment
           </button>
         </form>
-
-        <p className="my-5 text-left">
-          You have {list.length} items in your ToDo List
-        </p>
 
         <div className="w-96 md:w-1/2">
           <List items={list} deleteItem={deleteItem} />
