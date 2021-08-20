@@ -14,16 +14,16 @@ export default function DefaultVideo() {
             <video
               src={video.link}
               height={400}
-              width={800}
               controls={true}
+              className="w-full"
             ></video>
-            <h2 className="font-bold text-2xl mt-5 mb-3 w-full lg:w-1/2">
+            <h2 className="font-bold text-2xl mt-5 mb-3 w-full">
               {video.title}
             </h2>
             {readMore ? (
-              <p className="w-full lg:w-1/2 mb-5">{video.desc}</p>
+              <p className="w-full mb-5">{video.desc}</p>
             ) : (
-              <p className="w-full lg:w-1/2 mb-5">{`${video.desc.substring(
+              <p className="w-full mb-5">{`${video.desc.substring(
                 0,
                 200
               )}...`}</p>
