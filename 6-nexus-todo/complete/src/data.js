@@ -9,35 +9,35 @@ export const defaultVideo = [
   },
 ]
 
-export const data = [
-  {
-    id: uuidv4(),
-    link: "https://player.vimeo.com/external/485398802.sd.mp4?s=4acc40823b0a547aea1806b3fe0e2597940dcb06&profile_id=139&oauth2_token_id=57447761",
-    title: "Random video 1",
-    desc: "Lorem ipsum dolor sit amet...",
-  },
-  {
-    id: uuidv4(),
-    link: "https://player.vimeo.com/external/485398802.sd.mp4?s=4acc40823b0a547aea1806b3fe0e2597940dcb06&profile_id=139&oauth2_token_id=57447761",
-    title: "Random video 2",
-    desc: "Lorem ipsum dolor sit amet...",
-  },
-  {
-    id: uuidv4(),
-    link: "https://player.vimeo.com/external/485398802.sd.mp4?s=4acc40823b0a547aea1806b3fe0e2597940dcb06&profile_id=139&oauth2_token_id=57447761",
-    title: "Random video 3",
-    desc: "Lorem ipsum dolor sit amet...",
-  },
-  {
-    id: uuidv4(),
-    link: "https://player.vimeo.com/external/485398802.sd.mp4?s=4acc40823b0a547aea1806b3fe0e2597940dcb06&profile_id=139&oauth2_token_id=57447761",
-    title: "Random video 4",
-    desc: "Lorem ipsum dolor sit amet...",
-  },
-  {
-    id: uuidv4(),
-    link: "https://player.vimeo.com/external/485398802.sd.mp4?s=4acc40823b0a547aea1806b3fe0e2597940dcb06&profile_id=139&oauth2_token_id=57447761",
-    title: "Random video 5",
-    desc: "Lorem ipsum dolor sit amet...",
-  },
-]
+// export const data = [
+//   {
+//     id: uuidv4(),
+//     link: "https://player.vimeo.com/external/485398802.sd.mp4?s=4acc40823b0a547aea1806b3fe0e2597940dcb06&profile_id=139&oauth2_token_id=57447761",
+//     title: "Random video 1",
+//     desc: "Lorem ipsum dolor sit amet...",
+//   },
+//   {
+//     id: uuidv4(),
+//     link: "https://player.vimeo.com/external/485398802.sd.mp4?s=4acc40823b0a547aea1806b3fe0e2597940dcb06&profile_id=139&oauth2_token_id=57447761",
+//     title: "Random video 2",
+//     desc: "Lorem ipsum dolor sit amet...",
+//   },
+//   {
+//     id: uuidv4(),
+//     link: "https://player.vimeo.com/external/485398802.sd.mp4?s=4acc40823b0a547aea1806b3fe0e2597940dcb06&profile_id=139&oauth2_token_id=57447761",
+//     title: "Random video 3",
+//     desc: "Lorem ipsum dolor sit amet...",
+//   },
+//   {
+//     id: uuidv4(),
+//     link: "https://player.vimeo.com/external/485398802.sd.mp4?s=4acc40823b0a547aea1806b3fe0e2597940dcb06&profile_id=139&oauth2_token_id=57447761",
+//     title: "Random video 4",
+//     desc: "Lorem ipsum dolor sit amet...",
+//   },
+//   {
+//     id: uuidv4(),
+//     link: "https://player.vimeo.com/external/485398802.sd.mp4?s=4acc40823b0a547aea1806b3fe0e2597940dcb06&profile_id=139&oauth2_token_id=57447761",
+//     title: "Random video 5",
+//     desc: "Lorem ipsum dolor sit amet...",
+//   },
+// ]
