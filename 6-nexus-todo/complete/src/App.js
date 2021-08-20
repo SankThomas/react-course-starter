@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import List from "./List"
 import { v4 as uuidv4 } from "uuid"
 import DefaultVideo from "./components/DefaultVideo"
-import MoreVideos from "./components/MoreVideos"
 
 const getLocalStorage = () => {
   let list = localStorage.getItem("list")
@@ -55,8 +54,6 @@ const App = () => {
 
         <div className="flex flex-col lg:flex-row">
           <DefaultVideo />
-
-          <MoreVideos />
         </div>
 
         <form onSubmit={handleSubmit} autoComplete="off" className="mb-10">
@@ -67,11 +64,11 @@ const App = () => {
             value={text}
             onChange={(e) => setText(e.target.value)}
             autoFocus
-            className="bg-transparent border-b mr-2 p-2 w-full lg:w-1/2"
+            className="bg-transparent border-b mr-2 p-2 w-full"
           />
           <button
             type="reset"
-            className="text-gray-100 font-bold tracking-widest rounded-md p-2 uppercase text-sm mt-5 lg:mt-0"
+            className="text-gray-100 font-bold tracking-widest rounded-md p-2 uppercase text-sm mt-5"
             onClick={handleCancel}
           >
             Cancel
@@ -85,7 +82,8 @@ const App = () => {
           </button>
         </form>
 
-        <div className="w-96 md:w-1/2">
+        <div>
+          <h4 className="font-bold mb-5 text-xl">{list.length} comments</h4>
           <List items={list} deleteItem={deleteItem} />
         </div>
       </section>
